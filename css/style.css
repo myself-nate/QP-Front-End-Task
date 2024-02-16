@@ -310,12 +310,9 @@
 	color: #333;
 	font-size: 1.5rem;
 	margin: 0.5rem 10rem;
-}
-
-.card-question {
 	border: 1px solid #6248ff;
-	padding: 2rem;
 	border-radius: 15px;
+	padding: 2rem;
 	display: flex;
 	justify-content: space-between;
 }
