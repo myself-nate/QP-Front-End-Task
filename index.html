@@ -37,7 +37,7 @@
 	</head>
 	<body>
 		<header class="header">
-			<div class="nav-links">
+			<div class="nav-links hidden">
 				<div>
 					<a href="#" class="logo"> LOGO </a>
 				</div>
@@ -54,16 +54,16 @@
 				</nav>
 			</div>
 			<div class="nav-btns">
-				<div class="select">
+				<div class="select hidden">
 					<select name="language" class="select-lang">
 						<option value="english">EN</option>
 					</select>
 				</div>
-				<a class="main-nav-link nav-cta" href="#"> SIGN IN FOR FREE</a>
+				<a class="main-nav-link nav-cta hidden" href="#"> SIGN IN FOR FREE</a>
 			</div>
 			<button class="btn-mobile-nav">
 				<ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-				<ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+				<!-- //close -->
 			</button>
 		</header>
 
@@ -157,29 +157,38 @@
 			</section>
 
 			<section class="section-testimonials">
-				<div class="container testimonials-title">
+				<div class="testimonials-title">
 					<h2 class="heading-secondary">
 						People love Big <br />
 						<span class="heading-back">Invest</span>
 					</h2>
 					<div class="testimonials-btns">
-						<a class="test-btn testimonial-btn--left" href="#"
-							><ion-icon
-								class="testimonial-btn-left disabled"
-								name="chevron-back-outline"
-							></ion-icon
-						></a>
-						<a class="test-btn testimonial-btn--right" href="#"
-							><ion-icon
-								class="testimonial-btn-right"
-								name="chevron-forward-outline"
-							></ion-icon
-						></a>
+						<ion-icon
+							class="test-btn testimonial-btn--left"
+							name="chevron-back-outline"
+						></ion-icon>
+						<ion-icon
+							class="test-btn testimonial-btn--right"
+							name="chevron-forward-outline"
+						></ion-icon>
 					</div>
+					<svg
+						class="testimonial-quotes"
+						width="35"
+						height="30"
+						viewBox="0 0 35 30"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M1.113 28V28.6101L1.71124 28.4903C5.52479 27.7261 8.70068 26.0612 10.922 23.428C13.1451 20.7928 14.3731 17.234 14.3731 12.7565V1V0.5H13.8731H1H0.5V1V13.6531V14.1531H1H7.54024C7.47188 15.966 7.02504 17.549 6.14534 18.8093C5.19104 20.1765 3.69469 21.2112 1.49706 21.735L1.113 21.8266V22.2214V28ZM21.2399 28V28.6085L21.8369 28.4905C25.7013 27.7266 28.8787 26.0618 31.0882 23.4269C33.299 20.7904 34.5 17.2314 34.5 12.7565V1V0.5H34H21.1269H20.6269V1V13.6531V14.1531H21.1269H27.6672C27.5988 15.966 27.152 17.549 26.2723 18.8093C25.318 20.1765 23.8216 21.2112 21.624 21.735L21.2399 21.8266V22.2214V28Z"
+							stroke="#6248FF"
+						/>
+					</svg>
 				</div>
 
 				<div class="slider">
-					<div class="container testimonials-container slide-1">
+					<div class="container testimonials-container">
 						<figure class="testimonial-person">
 							<img
 								class="testimonial-img"
@@ -192,19 +201,6 @@
 							</div>
 						</figure>
 						<div class="testimonial-p">
-							<svg
-								class="testimonial-quotes"
-								width="35"
-								height="30"
-								viewBox="0 0 35 30"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M1.113 28V28.6101L1.71124 28.4903C5.52479 27.7261 8.70068 26.0612 10.922 23.428C13.1451 20.7928 14.3731 17.234 14.3731 12.7565V1V0.5H13.8731H1H0.5V1V13.6531V14.1531H1H7.54024C7.47188 15.966 7.02504 17.549 6.14534 18.8093C5.19104 20.1765 3.69469 21.2112 1.49706 21.735L1.113 21.8266V22.2214V28ZM21.2399 28V28.6085L21.8369 28.4905C25.7013 27.7266 28.8787 26.0618 31.0882 23.4269C33.299 20.7904 34.5 17.2314 34.5 12.7565V1V0.5H34H21.1269H20.6269V1V13.6531V14.1531H21.1269H27.6672C27.5988 15.966 27.152 17.549 26.2723 18.8093C25.318 20.1765 23.8216 21.2112 21.624 21.735L21.2399 21.8266V22.2214V28Z"
-									stroke="#6248FF"
-								/>
-							</svg>
 							<p class="testimonial-text">
 								This magical product actually works! It has radically changed
 								the way we build our audiences. Increasing new customer sales by
@@ -214,7 +210,7 @@
 						</div>
 					</div>
 
-					<div class="container testimonials-container slide-2">
+					<div class="container testimonials-container">
 						<figure class="testimonial-person">
 							<img
 								class="testimonial-img"
@@ -227,29 +223,17 @@
 							</div>
 						</figure>
 						<div class="testimonial-p">
-							<svg
-								class="testimonial-quotes"
-								width="35"
-								height="30"
-								viewBox="0 0 35 30"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M1.113 28V28.6101L1.71124 28.4903C5.52479 27.7261 8.70068 26.0612 10.922 23.428C13.1451 20.7928 14.3731 17.234 14.3731 12.7565V1V0.5H13.8731H1H0.5V1V13.6531V14.1531H1H7.54024C7.47188 15.966 7.02504 17.549 6.14534 18.8093C5.19104 20.1765 3.69469 21.2112 1.49706 21.735L1.113 21.8266V22.2214V28ZM21.2399 28V28.6085L21.8369 28.4905C25.7013 27.7266 28.8787 26.0618 31.0882 23.4269C33.299 20.7904 34.5 17.2314 34.5 12.7565V1V0.5H34H21.1269H20.6269V1V13.6531V14.1531H21.1269H27.6672C27.5988 15.966 27.152 17.549 26.2723 18.8093C25.318 20.1765 23.8216 21.2112 21.624 21.735L21.2399 21.8266V22.2214V28Z"
-									stroke="#6248FF"
-								/>
-							</svg>
 							<p class="testimonial-text">
-								This magical product actually works! It has radically changed
-								the way we build our audiences. Increasing new customer sales by
-								6x in our most mature market.
+								Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
+								similique repudiandae sit officiis perferendis! Mollitia neque
+								repudiandae quaerat eius pariatur odit, a maxime aut! Mollitia,
+								sint. Ex rerum est quasi!
 							</p>
 							<p class="testimonial-no">02 / 04</p>
 						</div>
 					</div>
 
-					<div class="container testimonials-container slide-3">
+					<div class="container testimonials-container">
 						<figure class="testimonial-person">
 							<img
 								class="testimonial-img"
@@ -262,29 +246,17 @@
 							</div>
 						</figure>
 						<div class="testimonial-p">
-							<svg
-								class="testimonial-quotes"
-								width="35"
-								height="30"
-								viewBox="0 0 35 30"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M1.113 28V28.6101L1.71124 28.4903C5.52479 27.7261 8.70068 26.0612 10.922 23.428C13.1451 20.7928 14.3731 17.234 14.3731 12.7565V1V0.5H13.8731H1H0.5V1V13.6531V14.1531H1H7.54024C7.47188 15.966 7.02504 17.549 6.14534 18.8093C5.19104 20.1765 3.69469 21.2112 1.49706 21.735L1.113 21.8266V22.2214V28ZM21.2399 28V28.6085L21.8369 28.4905C25.7013 27.7266 28.8787 26.0618 31.0882 23.4269C33.299 20.7904 34.5 17.2314 34.5 12.7565V1V0.5H34H21.1269H20.6269V1V13.6531V14.1531H21.1269H27.6672C27.5988 15.966 27.152 17.549 26.2723 18.8093C25.318 20.1765 23.8216 21.2112 21.624 21.735L21.2399 21.8266V22.2214V28Z"
-									stroke="#6248FF"
-								/>
-							</svg>
 							<p class="testimonial-text">
-								This magical product actually works! It has radically changed
-								the way we build our audiences. Increasing new customer sales by
-								6x in our most mature market.
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
+								doloribus laborum facilis repellendus dolorem aspernatur
+								explicabo nam, ratione velit labore dolores eos. Ullam ipsa,
+								voluptatem aut expedita pariatur harum distinctio.
 							</p>
 							<p class="testimonial-no">03 / 04</p>
 						</div>
 					</div>
 
-					<div class="container testimonials-container slide-4">
+					<div class="container testimonials-container">
 						<figure class="testimonial-person">
 							<img
 								class="testimonial-img"
@@ -297,23 +269,11 @@
 							</div>
 						</figure>
 						<div class="testimonial-p">
-							<svg
-								class="testimonial-quotes"
-								width="35"
-								height="30"
-								viewBox="0 0 35 30"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M1.113 28V28.6101L1.71124 28.4903C5.52479 27.7261 8.70068 26.0612 10.922 23.428C13.1451 20.7928 14.3731 17.234 14.3731 12.7565V1V0.5H13.8731H1H0.5V1V13.6531V14.1531H1H7.54024C7.47188 15.966 7.02504 17.549 6.14534 18.8093C5.19104 20.1765 3.69469 21.2112 1.49706 21.735L1.113 21.8266V22.2214V28ZM21.2399 28V28.6085L21.8369 28.4905C25.7013 27.7266 28.8787 26.0618 31.0882 23.4269C33.299 20.7904 34.5 17.2314 34.5 12.7565V1V0.5H34H21.1269H20.6269V1V13.6531V14.1531H21.1269H27.6672C27.5988 15.966 27.152 17.549 26.2723 18.8093C25.318 20.1765 23.8216 21.2112 21.624 21.735L21.2399 21.8266V22.2214V28Z"
-									stroke="#6248FF"
-								/>
-							</svg>
 							<p class="testimonial-text">
-								This magical product actually works! It has radically changed
-								the way we build our audiences. Increasing new customer sales by
-								6x in our most mature market.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Aspernatur nihil nemo incidunt minus error sequi, debitis
+								eligendi tempore minima quidem itaque cupiditate ratione id
+								soluta ducimus sed quaerat nisi obcaecati.
 							</p>
 							<p class="testimonial-no">04 / 04</p>
 						</div>
@@ -333,12 +293,10 @@
 						<div class="faq-question">
 							<h3>How do I change my details?</h3>
 							<p class="faq-p hidden">
-								We provide only the best trading software. The trading terminal
-								MetaTrader4 is the most popular and convenient platform for
-								access to global exchanges. You can work anywhere. All you need
-								is the internet because the necessary trading tools are already
-								collected in one place and are available in a couple of clicks.
-								Use only the best and develop with us!
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+								Reiciendis suscipit repudiandae, odio nihil fugiat repellendus
+								rem architecto quas placeat alias ea, veritatis labore
+								perferendis earum sunt! Velit quidem reprehenderit quae?
 							</p>
 						</div>
 
@@ -418,12 +376,10 @@
 						<div class="faq-question">
 							<h3>How do I change my details?</h3>
 							<p class="faq-p hidden">
-								We provide only the best trading software. The trading terminal
-								MetaTrader4 is the most popular and convenient platform for
-								access to global exchanges. You can work anywhere. All you need
-								is the internet because the necessary trading tools are already
-								collected in one place and are available in a couple of clicks.
-								Use only the best and develop with us!
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Architecto et consectetur nobis esse odit ducimus dignissimos
+								nam ut quibusdam iste saepe ipsam, blanditiis dolorum
+								praesentium. Vel iste tempora odio aspernatur.
 							</p>
 						</div>
 						<ion-icon class="faq-icon" name="add-outline"></ion-icon>
@@ -543,5 +499,7 @@
 				</ul>
 			</div>
 		</footer>
+
+		<div class="overlay hidden"></div>
 	</body>
 </html>
