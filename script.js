@@ -84,3 +84,78 @@ mobIcon.addEventListener('click', (e) => {
 			.setAttribute('name', 'menu-outline');
 	}
 });
+
+// Form
+document.addEventListener('DOMContentLoaded', function () {
+	var form = document.querySelector('.form');
+	var sendButton = document.querySelector('.form-btn');
+	var nameInput = form.querySelector('input[name="name"]');
+	var messageInput = form.querySelector('textarea[name="text"]');
+	var emailInput = form.querySelector('input[name="email"]');
+	var emailErrorMessage = null;
+
+	var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+	function checkEmail() {
+		if (emailErrorMessage) {
+			emailErrorMessage.remove();
+		}
+
+		if (!emailRegex.test(emailInput.value.trim())) {
+			emailInput.classList.remove('form-ok');
+			emailInput.classList.add('form-bad');
+			emailErrorMessage = document.createElement('p');
+			emailErrorMessage.textContent = 'Please enter a valid email address.';
+			emailErrorMessage.classList.add('email-error');
+			emailInput.after(emailErrorMessage);
+			return false;
+		} else {
+			emailInput.classList.remove('form-bad');
+			emailInput.classList.add('form-ok');
+			return true;
+		}
+	}
+
+	function checkName() {
+		if (nameInput.value.trim() !== '') {
+			nameInput.classList.add('form-ok');
+			return true;
+		} else {
+			nameInput.classList.remove('form-ok');
+			return false;
+		}
+	}
+
+	function checkMsg() {
+		if (messageInput.value.trim() !== '') {
+			messageInput.classList.add('form-ok');
+			return true;
+		} else {
+			messageInput.classList.remove('form-ok');
+			return false;
+		}
+	}
+
+	function checkForm() {
+		if (checkName() && checkEmail() && checkMsg()) {
+			sendButton.removeAttribute('disabled');
+		} else {
+			sendButton.setAttribute('disabled', 'disabled');
+		}
+	}
+
+	form.addEventListener('input', function (event) {
+		if (event.target === emailInput) {
+			checkEmail();
+		}
+		if (event.target === nameInput) {
+			checkName();
+		}
+		if (event.target === messageInput) {
+			checkMsg();
+		}
+		checkForm();
+	});
+
+	checkForm();
+});

@@ -386,12 +386,19 @@ header .hidden {
 	border: 1px solid #828282;
 }
 
-.form-i.form-ok {
-	border: 1px solid #0eac00;
+.form-ok {
+	border: 1px solid #0eac00 !important;
 }
 
-.form-i.form-bad {
+.form-bad {
 	border: 1px solid #eb5757;
+}
+
+.email-error {
+	color: #eb5757;
+	font-size: 1.2rem;
+	align-self: start;
+	margin-bottom: 1rem;
 }
 
 .form-message {
