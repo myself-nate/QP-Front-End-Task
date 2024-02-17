@@ -1,6 +1,6 @@
 'use strict';
 
-//FAq
+//FAQ
 const icon = document.querySelectorAll('.faq-icon');
 const p = document.querySelectorAll('.faq-p');
 const cards = document.querySelectorAll('.card');
@@ -8,7 +8,6 @@ const cards = document.querySelectorAll('.card');
 cards.forEach((card, i) =>
 	card.addEventListener('click', (e) => {
 		e.preventDefault();
-		// p.forEach((pr) => pr[i].classList.toggle('hidden'));
 		if (p[i].classList.contains('hidden')) {
 			p[i].classList.remove('hidden');
 			icon[i].setAttribute('name', 'close-outline');

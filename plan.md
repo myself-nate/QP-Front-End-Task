@@ -21,3 +21,4 @@ Planning for Front End Task:
 
 3. Create media queries: 1440px, 768px, 320xp
 4. Create functionalities
+5. Review code and design and make final modifications, if any

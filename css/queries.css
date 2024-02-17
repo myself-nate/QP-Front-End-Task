@@ -244,6 +244,7 @@
 	}
 }
 
+/* Below 768 */
 @media (max-width: 48em) {
 	.container {
 		max-width: 30rem;
